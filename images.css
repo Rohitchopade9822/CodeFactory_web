@@ -1,22 +1,29 @@
+/* === Main Content Layout === */
 .main-content {
   display: flex;
   gap: 20px;
   align-items: flex-start;
   padding: 20px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
+/* Text Content */
 .text-content {
   flex: 1;
   padding-right: 20px;
+  min-width: 280px;
 }
 
+/* Image Carousel Container */
 .image-carousel {
   position: relative;
-  width: 550px;
+  width: 100%;
+  max-width: 550px; /* Limit width on large screens */
   height: auto;
   margin-top: 60px;
 }
 
+/* Individual Carousel Image */
 .carousel-image {
   position: absolute;
   top: 0;
@@ -28,8 +35,25 @@
   transition: opacity 0.5s ease-in-out;
 }
 
+/* Active Image */
 .carousel-image.active {
   opacity: 1;
   position: relative;
 }
 
+/* === Responsive Fixes === */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .text-content {
+    padding-right: 0;
+  }
+
+  .image-carousel {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+}
