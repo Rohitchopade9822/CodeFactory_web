@@ -1,0 +1,32 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.footer {
+  background-color: #100202;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.footer .social-links a {
+  color: #ffc107;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer .social-links a:hover {
+  text-decoration: underline;
+}
